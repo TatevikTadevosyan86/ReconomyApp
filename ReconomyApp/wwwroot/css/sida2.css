@@ -1,0 +1,175 @@
+﻿
+/* Table Styles */
+table {
+    width: 97%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: green; /* Default green background for buttons */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #218838; /* Darker green on hover */
+        transform: translateY(-2px); /* Small lift effect */
+        border-color: #1e7e34; /* Change border color on hover */
+    }
+
+    button:active {
+        transform: translateY(0); /* No lift on click */
+        background-color: #1c7430; /* Darkest green when clicked */
+    }
+
+/* Modal Styles */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%; /* Ensures the modal doesn’t overflow on smaller screens */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal-content button {
+    margin-top: 20px;
+}
+
+/* Form Styles */
+input[type="text"], input[type="date"], input[type="radio"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto; /* For radio buttons */
+    margin-right: 5px;
+}
+
+/* Participant List Styles */
+#participantListToRemove {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    #participantListToRemove li {
+        margin-bottom: 10px; /* Space between list items */
+    }
+
+/* Additional Utility Classes */
+.hidden {
+    display: none;
+}
+
+h3 {
+    margin-top:40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* Menu Bar Styles */
+.menu-bar {
+    background-color: green; /* Green background */
+    padding: 10px;
+}
+
+    .menu-bar ul {
+        list-style-type: none; /* Remove default list styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Align the list items horizontally */
+        justify-content: space-around; /* Space items equally */
+        align-items: center; /* Center the items vertically */
+    }
+
+    .menu-bar li {
+        flex: 1; /* Each item takes up equal space */
+        text-align: center; /* Center the text in each item */
+        position: relative; /* To position borders correctly */
+    }
+
+        .menu-bar li:last-child {
+            margin-right: 0; /* Remove margin on the last item */
+        }
+
+    .menu-bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white; /* White text */
+        border-right: 2px solid white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        display: block;
+    }
+        .menu-bar li:last-child {
+            border-right: none;
+        }
+            .menu-bar li:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .menu-bar li:active {
+            background-color: #3e8e41; /* Even darker green on click */
+        }

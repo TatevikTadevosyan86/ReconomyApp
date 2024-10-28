@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="~/css/sida2.css" asp-append-version="true">
+</head>
+<body>
+    <div>
+        
+
+        <div class="parent-container">
+            <div class="input-remove-container">
+                <div class="view-group">
+                    <label for="participant">Deltagares Lista:</label>
+                    <select id="participant" name="participant_name" required></select>
+                </div>
+                <div class="add-group">
+                    <label for="participant">Lägg till namn:</label>
+                    <input type="text" id="namnInput" placeholder="Skriv in ett namn">
+                    <button id="addNamnButton">Lägg till namn</button><br />
+                </div>
+                <div class="remove-group">
+                    <label for="removeParticipant">Ta bort deltagare:</label>
+                    <select id="removeParticipant" name="remove_participant"></select>
+                    <button id="removeNamnButton">Ta bort namn</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/sida2/script.js"></script>
+</body>
+</html>

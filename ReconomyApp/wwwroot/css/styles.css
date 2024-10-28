@@ -1,0 +1,248 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+   
+    font-family: 'Roboto', sans-serif;
+    background: #f5f7f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.admin-login {
+    display: flex;
+    align-items: center;
+}
+
+    .admin-login form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .admin-login input[type="text"],
+    .admin-login input[type="password"] {
+        width: 200px; /* Fixed width */
+        height: 40px; /* Same height */
+        padding: 8px; /* Consistent padding */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        vertical-align: middle; /* Aligns input elements vertically */
+        margin: 0; /* Ensure no extra margin is applied */
+    }
+
+
+    .admin-login button {
+        padding: 8px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        height: 40px;
+    }
+
+.admin-login button:hover {
+    background-color: #218838;
+}
+.container {
+    background-image: url('/images/Back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the background covers the whole viewport */
+    display: flex; /* Makes content centerable if needed */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers the content vertically */
+}
+
+#welcome-background {
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background for a modern look */
+    color: white; /* White text for contrast */
+    border-radius: 15px; /* Rounded corners */
+    padding: 50px; /* Generous padding for spacing */
+    text-align: center; /* Centered text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin:  auto; /* Centered with margin */
+    max-width: 500px; /* Max width for better readability */
+    height: 500px; /* Increased height */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+    #welcome-background h1 {
+        font-size: 2.5rem; /* Larger font size for the heading */
+        margin-bottom: 20px; /* Space below the heading */
+    }
+
+    #welcome-background p {
+        font-size: 1.2rem; /* Slightly larger text for the paragraph */
+        margin-bottom: 30px; /* Space below the paragraph */
+    }
+
+#check-in-button {
+    padding: 10px 20px; /* Larger padding for the button */
+    font-size: 1.1rem; /* Larger font size for the button text */
+    background-color: green; /* Primary color for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    color: white; /* White text for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+    margin: 0 auto; /* Center the button */
+    display: inline-block;
+}
+
+    #check-in-button:hover {
+        background-color: olivedrab; /* Darker color on hover */
+    }
+
+
+.check-in {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    
+    margin: auto;
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.check-in form {
+    margin-top: 20px;
+}
+
+.check-in input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.check-in button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-in  button:hover {
+    background-color: #218838;
+}
+.early-departure {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#reason-container {
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+}
+
+#reason-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reason {
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 auto; /* Center the input field */
+    display: block; /* Ensure it remains a block element */
+}
+.fas {
+    color: #28a745; /* Example: green color */
+}
+
+/* Change color for specific icons */
+.fas.fa-walking {
+    color: #2196f3; /* Example: orange color */
+}
+
+.fas.fa-running {
+    color: #ff5722 /* Example: blue color */
+}
+
+.fas.fa-question {
+    color: #9c27b0; /* Example: purple color */
+}
+/* Pop-Up Overlay */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's on top of other content */
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.popup-content h2 {
+    margin: 0 0 10px 0;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #218838;
+}
+.footer {
+    background-color: white;
+    padding: 15px 20px; /* Set padding to match the desired height */
+    border-top: 1px solid #ccc;
+    text-align: center;
+    width: 100%; /* Ensure footer spans full width */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+    height: 15px; /* Fixed height for the footer */
+    line-height: 15px; /* Center text vertically */
+}

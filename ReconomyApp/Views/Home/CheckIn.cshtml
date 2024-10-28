@@ -1,0 +1,56 @@
+﻿@{
+    // Anger att denna vy använder en layoutfil som heter "_Layout".
+    Layout = "_Layout";
+}
+<div class="container">
+    <div id="welcome-background">
+        <h1>Welcome to Employees Portal</h1>
+        <p>Please click the button below to check in.</p>
+        <button id="check-in-button" class="btn btn-primary"> Check In/Out </button>
+    </div>
+
+    <div class="check-in" id="check-in-form-container" style="display: none; margin-top: 20px;">
+        <h1>Deltagare Incheckning</h1>
+        <form id="check-in-form" asp-action="CheckIn" method="POST">
+            <!-- Formuläret med id "check-in-form" kommer att skicka en POST-begäran till "CheckIn"-metoden i HomeController -->
+            <label for="participant">Välj ditt namn:</label>
+
+            <select id="participant" name="participant_name" required>
+                <option value="" disabled selected>Välj deltagare</option>
+
+                <!-- Populate with participants dynamically -->
+            </select> <br> <br>
+
+            <div class="status-option">
+                <label>
+                    <input type="radio" name="status" value="kom" required> Kom
+                    <i class="fas fa-walking"></i>
+                </label>
+                <label>
+                    <input type="radio" name="status" value="gick">Gick
+                    <i class="fas fa-running"></i>
+                </label>
+                <label>
+                    <input id="ovrigt-radio" type="radio" name="status" value="ovrigt">Övrigt
+                    <i class="fas fa-question"></i>
+                </label>
+            </div>
+
+            <div class="early-departure" id="early-departure-container" style="display: none;">
+                <label>
+                    <input type="checkbox" id="early-check" name="early_departure"> Går tidigare
+                </label>
+                <div id="reason-container" style="display: none;">
+                    <label for="reason">Ange orsak:</label>
+                    <input type="text" id="reason" name="reason" placeholder="Skriv orsaken">
+                </div>
+            </div> <br>
+            <div id="Övrigt-container" style="display: none;">
+                <label for="Övrigt">Details</label>
+                <input type="text" id="Övrigt" name="Övrigt" placeholder="Skriv förklaring">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

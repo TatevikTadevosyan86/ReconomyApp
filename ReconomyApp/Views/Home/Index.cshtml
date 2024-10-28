@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+// Importerar namnområdet Microsoft.AspNetCore.Mvc.Rendering som innehåller klasser och metoder för att rendera HTML-utdata i ASP.NET Core.
+// I detta fall används det för att tillhandahålla funktionalitet för att rendera HTML-formulär och vyer.
+
+@model ReconomyApp.Models.User
+// Anger att denna vy använder modellen av typen ReconomyApp.Models.User. Detta gör det möjligt att använda data från User-modellen i vyn.
+
+@{
+    // Definierar en block av C#-kod som körs vid rendering av vyn.
+    // Sätter titeln på sidan till "Login" som kommer att användas i layoutfilen eller på andra ställen där titeln behövs.
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<!-- En rubrik för sidan som visar "Login". -->
+
+<form asp-action="Login" method="post">
+    <!-- Ett HTML-formulär som skickar en POST-begäran till "Login"-metoden i din kontroller. -->
+    <input type="text" name="username" placeholder="Username" required />
+    <!-- Ett textfält för att ange användarnamn. -->
+    <input type="password" name="password" placeholder="Password" required />
+    <!-- Ett lösenordsfält för att ange lösenord. -->
+    <button type="submit">Login</button>
+    <!-- En knapp för att skicka formuläret. -->
+</form>
+
+@if (ViewBag.Error != null)
+{
+    // Kontrollera om ViewBag.Error inte är null.
+    // Om ViewBag.Error innehåller ett värde, renderas ett div-element med felet.
+    <div>@ViewBag.Error</div>
+}
